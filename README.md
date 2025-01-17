@@ -1,5 +1,7 @@
 # NYC Taxi Fare Prediction Pipeline
 
+![NYC Yellow Cab](images/ny_yellow_cab.jpg)
+
 ## Obiective
 
 ### O1 - Colectarea și pregătirea datelor pentru stocare
@@ -49,6 +51,9 @@
   - Calcularea metodelor de performanță (e.g., mean absolute error, R² score) pentru evaluarea predicțiilor.
 
 #### Vizualizare și analiză
+
+![Raport Looker](images/Raport_Looker.png)
+
 - **Etapele parcurse pentru integrarea și vizualizarea în Looker**:
   - **Pornirea de la tabelul din BigQuery**:
     - Datele preprocesate și importate în BigQuery au fost validate pentru a se asigura că sunt corect structurate și pregătite pentru utilizare analitică.
