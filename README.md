@@ -57,14 +57,15 @@
 - **Etapele parcurse pentru integrarea și vizualizarea în Looker**:
   - **Pornirea de la tabelul din BigQuery**:
     - Datele preprocesate și importate în BigQuery au fost validate pentru a se asigura că sunt corect structurate și pregătite pentru utilizare analitică.
-    - Colegul meu a efectuat analiza inițială direct în BigQuery, folosind interogări SQL pentru a verifica corectitudinea datelor și pentru a crea un subset relevant pentru vizualizare.
+    - A fost descărcat setul de date taxi_zones.csv (https://data.cityofnewyork.us/Transportation/NYC-Taxi-Zones/d3c5-ddgc) și urcat direct în BigQuery.
+    - În urma mai unor interogări am ajuns la versiunea finală și satisfăcătoare a tabelului nostru care conținea atât latitudinea/ longitudinea pentru puncte cât și o clasă care reprezenta punctul respectiv. De asemenea am extras din marcajele temporale.
   - **Conexiunea dintre BigQuery și Looker**:
     - Am configurat conexiunea dintre BigQuery și Looker, utilizând setările specifice GCP pentru autentificare și acces sigur la date.
     - Modelul de date în Looker a fost creat pe baza tabelului din BigQuery, definind metrici cheie (e.g., medii, sume) și dimensiuni relevante (e.g., locațiile de pick-up și drop-off, tarifele și distanțele).
   - **Crearea vizualizărilor în Looker**:
-    - Am construit dashboard-uri interactive care oferă perspective asupra tarifelor curselor de taxi din New York City.
+    - Am construit un dashboard interactiv care oferă o perspectivă asupra tarifelor curselor de taxi din New York City.
 
-- **Analiza raportului vizual**:
+- **Analiza raportului**:
   - **Slider pentru valoarea cursei**:
     - Permite filtrarea curselor pe baza valorii tarifelor. De exemplu, cursele cu valori anormale (negative sau foarte mari) pot fi excluse pentru o analiză mai precisă.
   - **Slider pentru distanță**:
@@ -77,6 +78,7 @@
     - Punctele sunt distribuite dens în Manhattan și Queens, sugerând o activitate intensă de taxi în aceste zone.
   - **Distribuția destinațiilor și tarifele asociate**:
     - Similar cu harta punctelor de plecare, acest grafic arată destinațiile finale ale curselor, evidențiind locațiile populare.
+    - Distribuția punctelor și culoarea lor ne arată o predominare a valoriilor medii conform legendei.
   - **Analiza rutelor între cartiere și costul mediu**:
     - Tabelul afișează principalele rute între cartiere (e.g., Queens → Manhattan, Manhattan → Bronx), împreună cu valoarea medie a cursei.
     - De exemplu, rutele din Queens spre Manhattan au o valoare medie de 81.47, indicând tarife mai mari comparativ cu rutele interne din Manhattan.
