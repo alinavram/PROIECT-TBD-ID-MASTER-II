@@ -1,4 +1,4 @@
-# NYC Taxi Fare Prediction Pipeline
+# NYC Taxi Fare Analysis and Prediction
 
 ![NYC Yellow Cab](images/ny_yellow_cab.jpg)
 
