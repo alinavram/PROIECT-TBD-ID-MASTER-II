@@ -43,6 +43,8 @@
 
 ### O3 - Construcția scenariilor de analiză
 
+![Vizualizare și analiză](images/vizualizare.webp)
+
 #### fare_amount_prediction.py
 - **Filtrarea și pregătirea datelor**:
   - Crearea unui tabel filtrat (`filtered_tripdata`) cu cursele relevante, excluzând valorile anormale (e.g., distanțe prea mici sau tarife eronate).
@@ -69,7 +71,7 @@
   - **Crearea vizualizărilor în Looker**:
     - Am construit un dashboard interactiv care oferă o perspectivă asupra tarifelor curselor de taxi din New York City.
 
-- **Analiza raportului**:
+- **Analiza raportului( [Raportul Looker](https://lookerstudio.google.com/s/guiOlXX7eF8))**:
   - **Slider pentru valoarea cursei**:
     - Permite filtrarea curselor pe baza valorii tarifelor. De exemplu, cursele cu valori anormale (negative sau foarte mari) pot fi excluse pentru o analiză mai precisă.
   - **Slider pentru distanță**:
@@ -85,7 +87,7 @@
     - Distribuția punctelor și culoarea lor ne arată o predominare a valorilor medii conform legendei.
   - **Analiza rutelor între cartiere și costul mediu**:
     - Tabelul afișează principalele rute între cartiere (e.g., Queens → Manhattan, Manhattan → Bronx), împreună cu valoarea medie a cursei.
-    - De exemplu, rutele din Queens spre Manhattan au o valoare medie de 81.47, indicând tarife mai mari comparativ cu rutele interne din Manhattan.
+    - De exemplu, rutele din Queens spre Manhattan au o valoare medie de $81.47, indicând tarife mai mari comparativ cu rutele interne din Manhattan.
 
 - **Rezultatul final**:
   - Dashboard-ul din Looker oferă o vedere clară asupra datelor, fiind util pentru identificarea trendurilor, optimizarea rutelor și analiza comportamentului clienților.
