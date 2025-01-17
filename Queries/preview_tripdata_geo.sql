@@ -1,0 +1,1 @@
+SELECT * FROM `tbd-24-25.nyc_taxi.taxi_tripdata_with_geography` LIMIT 5
