@@ -63,7 +63,7 @@
 - **Etapele parcurse pentru integrarea și vizualizarea în Looker**:
   - **Pornirea de la tabelul din BigQuery**:
     - Datele preprocesate și importate în BigQuery au fost validate pentru a se asigura că sunt corect structurate și pregătite pentru utilizare analitică.
-    - A fost descărcat setul de date taxi_zones.csv (https://data.cityofnewyork.us/Transportation/NYC-Taxi-Zones/d3c5-ddgc) și urcat direct în BigQuery.
+    - A fost descărcat setul de date [taxi_zones.csv](https://data.cityofnewyork.us/Transportation/NYC-Taxi-Zones/d3c5-ddgc) și urcat direct în BigQuery.
     - În urma unor interogări (vezi folderul Queries), am ajuns la versiunea finală și satisfăcătoare a tabelului nostru. Aceasta conține atât latitudinea/longitudinea pentru puncte cât și o clasă care reprezintă punctul respectiv. De asemenea, am extras marcajele temporale.
   - **Conexiunea dintre BigQuery și Looker**:
     - Am configurat conexiunea dintre BigQuery și Looker, utilizând setările specifice GCP pentru autentificare și acces sigur la date.
