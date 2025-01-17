@@ -6,6 +6,8 @@
 
 ### O1 - Colectarea și pregătirea datelor pentru stocare
 
+![Colectarea și pregătirea datelor](images/colectare.webp)
+
 #### preprocess_and_data_storage.py
 - **Descărcarea datelor**:
   - Descărcarea fișierului PARQUET corespunzător lunii și anului specificat dintr-o sursă externă.
@@ -20,6 +22,8 @@
 ---
 
 ### O2 - Stocarea datelor în soluții de stocare care să permită procesarea lor
+
+![Stocarea datelor](images/stocare.webp)
 
 #### preprocess_and_data_storage.py
 - **Crearea unui dataset BigQuery**:
@@ -58,7 +62,7 @@
   - **Pornirea de la tabelul din BigQuery**:
     - Datele preprocesate și importate în BigQuery au fost validate pentru a se asigura că sunt corect structurate și pregătite pentru utilizare analitică.
     - A fost descărcat setul de date taxi_zones.csv (https://data.cityofnewyork.us/Transportation/NYC-Taxi-Zones/d3c5-ddgc) și urcat direct în BigQuery.
-    - În urma mai unor interogări am ajuns la versiunea finală și satisfăcătoare a tabelului nostru care conținea atât latitudinea/ longitudinea pentru puncte cât și o clasă care reprezenta punctul respectiv. De asemenea am extras din marcajele temporale.
+    - În urma unor interogări (vezi folderul Queries), am ajuns la versiunea finală și satisfăcătoare a tabelului nostru. Aceasta conține atât latitudinea/longitudinea pentru puncte cât și o clasă care reprezintă punctul respectiv. De asemenea, am extras marcajele temporale.
   - **Conexiunea dintre BigQuery și Looker**:
     - Am configurat conexiunea dintre BigQuery și Looker, utilizând setările specifice GCP pentru autentificare și acces sigur la date.
     - Modelul de date în Looker a fost creat pe baza tabelului din BigQuery, definind metrici cheie (e.g., medii, sume) și dimensiuni relevante (e.g., locațiile de pick-up și drop-off, tarifele și distanțele).
@@ -78,7 +82,7 @@
     - Punctele sunt distribuite dens în Manhattan și Queens, sugerând o activitate intensă de taxi în aceste zone.
   - **Distribuția destinațiilor și tarifele asociate**:
     - Similar cu harta punctelor de plecare, acest grafic arată destinațiile finale ale curselor, evidențiind locațiile populare.
-    - Distribuția punctelor și culoarea lor ne arată o predominare a valoriilor medii conform legendei.
+    - Distribuția punctelor și culoarea lor ne arată o predominare a valorilor medii conform legendei.
   - **Analiza rutelor între cartiere și costul mediu**:
     - Tabelul afișează principalele rute între cartiere (e.g., Queens → Manhattan, Manhattan → Bronx), împreună cu valoarea medie a cursei.
     - De exemplu, rutele din Queens spre Manhattan au o valoare medie de 81.47, indicând tarife mai mari comparativ cu rutele interne din Manhattan.
